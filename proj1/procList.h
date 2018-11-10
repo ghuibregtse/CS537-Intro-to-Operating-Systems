@@ -1,0 +1,16 @@
+////////////////////////////////////////////////////////////////////////////////
+// File:        procList.h
+//
+// Names:       Garret Huibregtse Tyler Patton
+// Emails:      ghuibregtse@wisc.edu tpatton4@wisc.edu
+//
+// Description: Header file for procList.c
+////////////////////////////////////////////////////////////////////////////////
+#ifndef __procList_h__
+#define __proclist_h__
+
+void getProcList(int *flags);
+
+
+
+#endif

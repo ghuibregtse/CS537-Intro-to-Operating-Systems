@@ -1,0 +1,17 @@
+Program:        537ps
+Main:           537ps.c
+Files:          optProc.c optProc.h procList.c procList.h parser.c parser.h 
+                Makefile
+
+Names:          Garret Huibregtse & Tyler Patton
+Emails:         ghuibregtse@wisc.edu & tpatton4@wisc.edu
+
+Description:    This program mimics the linux ps command. It gets a set of 
+                arguments from the user when it is run which must be processed.
+                These arguments tell the program what info is desired about each
+                process or which process we want to look at in particular.
+                Once the flags are set for the info desired about each process,
+                the program iterates through /proc, finds all the processes that
+                belong to the user, parses through each one's stat, statm, and
+                cmdline psuedofiles to print out the desired info (state, utime,
+                stime, vmemory, cmdline).
