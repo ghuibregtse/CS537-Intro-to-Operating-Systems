@@ -1,0 +1,8 @@
+Program:      prodcomm
+Main:         main.c
+Files:        munch1.c munch1.h munch2.c munch2.h queue.c queue.h reader.c reader.h writer.c writer.h Makefile
+
+Description:  This is a multithreaded program that parses input files passed in through stdin, passes each line into a queue
+              where it is concurrently being dequeued and modified. Uses monitors to synchronize the queue operations to 
+              prevent race conditions. After the lines have been modified, they are printed to stdout which can be redirected
+              into an output file.
