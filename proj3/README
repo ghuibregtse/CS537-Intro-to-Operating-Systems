@@ -1,0 +1,42 @@
+Program:        537Make
+Main:           main.c
+Files:          parser.c parser.h graph.c graph.h execute.c execute.h Makefile
+
+Names:          Garret Huibregtse & Tyler Patton
+Emails:         ghuibregtse@wisc.edu & tpatton4@wisc.edu
+
+Description:    This program emulates the make command that builds C programs
+                by parsing a makefile, creating a graph hierarchy of targets,
+                and executing the commands of each target based on its
+                dependencies modification times.
+
+
+Assignment #3-1 
+
+    parser.c:58 
+    main.c:25
+                We were mallocing space for a Graph structure but then assigning
+                the Graph structure in main, which we alread malloced space for,
+                to it so there was a memory leak. Fixed by not mallocing in main.
+    
+    parser.c:143
+                We were letting the length of the strings get to be the size of 
+                the buffer so there was no room for a null terminator on the end.
+                The fix was to throw an error if the string got to be 
+                BUFFER_SIZE - 1 so that there was a null terminator always at the
+                end
+                
+    graph.c:179
+                Since we were not freeing any of the graph nodes after completion
+                of the program, we were getting a memory leak from this. Although
+                it is unnesseary to free the memory allocated by the graph as we
+                are exiting the program right after, we had originally wrote these
+                functions, but removed them when we turned them in so since we 
+                already had them, we decided to add them back in and call them in main
+                before termination in order to fix this error.
+
+    main.c:85
+                Added in checks for if the graph head, or first entry are NULL before
+                accessing them to prevent access of garbage value. Also initilized
+                graph to NULL.
+
