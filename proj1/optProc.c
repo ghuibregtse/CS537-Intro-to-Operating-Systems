@@ -4,6 +4,7 @@
 //
 // Names:       Garret Huibregtse & Tyler Patton
 // Emails:      ghuibregtse@wisc.edu & tpatton4@wisc.edu
+// CS Logins:   ghuibregtse & tpatton
 //
 // Description: This file processes the argument flags of our ps program.
 //
