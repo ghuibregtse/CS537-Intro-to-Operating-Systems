@@ -2,7 +2,7 @@
 Repository for OS programming assignments
 
 Each folder contains a programming assignment that I completed during my Intro to Operating Systems class at UW-Madison.
-Each folder contains a more indepth README about the program.
+Each folder contains a in-depth README about the program.
 
 Name:     Garret Huibregtse
 
